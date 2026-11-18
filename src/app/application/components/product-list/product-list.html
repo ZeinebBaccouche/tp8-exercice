@@ -1,0 +1,11 @@
+<h1>
+    Liste des produits
+</h1>
+<ul>
+    @for (p of products(); track $index) {
+        <li>
+            Id: {{p.id}}-- Nom: {{p.name}} --Prix: {{p.price}}
+        </li>
+    }
+</ul>
+<button (click)="onaddproduct()">Ajouter</button>

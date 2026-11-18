@@ -1,0 +1,8 @@
+<div class="container mt-3">
+  <h1>Liste des parcs d'attraction</h1>
+  <ul class="list-group">
+    @for (park of parks(); track park.id) {
+      <app-park-item [park]="park" />
+    } 
+  </ul>
+</div>

@@ -1,0 +1,19 @@
+<li class="list-group-item d-flex align-items-center justify-content-between">
+  <div class="d-flex align-items-center">
+    <img [src]="park().photo" [alt]="park().name" width="40" height="40" class="me-2" />
+    <span class="me-2">Id: {{ park().id }}</span>
+    <strong class="me-2">{{ park().name }}</strong>
+    <span class="badge text-bg-primary">{{ park().nbLikes }} <i class="bi bi-hand-thumbs-up-fill"></i></span>
+  </div>
+  <div>
+    <a class="btn btn-info btn-sm me-1" [routerLink]="['/parks', park().id]">
+      <i class="bi bi-info-circle-fill"></i> Infos
+    </a>
+    <button class="btn btn-danger btn-sm me-1" (click)="onLike()">
+      <i class="bi bi-heart-fill"></i> Likes
+    </button>
+    <button class="btn btn-secondary btn-sm" (click)="onDelete()">
+      <i class="bi bi-trash-fill"></i> Supprimer
+    </button>
+  </div>
+</li>

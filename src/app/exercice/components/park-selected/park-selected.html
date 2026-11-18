@@ -1,0 +1,14 @@
+@if (park(); as p) {
+  <div class="container mt-3" style="max-width: 600px">
+    <h4 class="text-center text-uppercase">{{ p.name }}</h4>
+    <div class="card mb-3">
+      <ul class="card-body mb-0">
+       <li> Date d'ouverture :{{ p.openingDate }}</li>
+       <li>Horaire ; {{ p.hours }}</li>
+      </ul>
+    </div>
+    <div class="text-center">
+      <button class="btn btn-primary" (click)="onBack()">Retour</button>
+    </div>
+  </div>
+}
